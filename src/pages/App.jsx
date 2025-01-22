@@ -10,6 +10,7 @@ import Iletisim from "./Iletisim";
 import Login from "./Login";
 import Register from "./Register";
 import SifremiUnuttum from "./SifremiUnuttum";
+import urunler from "../data/urunler";
 
 function App() {
   const [sepet, setSepet] = useState([]);
@@ -59,7 +60,7 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={<Anasayfa ürünler={ürünler} sepeteEkle={sepeteEkle} />}
+            element={<Anasayfa ürünler={urunler} sepeteEkle={sepeteEkle} />}
           />
           <Route
             path="/urun/:id"
