@@ -54,18 +54,11 @@ function UrunKart({ ürün, sepeteEkle }) {
 
       {/* Ürün Resimleri */}
       <Link to={`/urun/${ürün.id}`}>
-        {Array.isArray(ürün.resimler) && ürün.resimler.length > 1 ? (
-          <UrunResimSlider
-            resimler={ürün.resimler}
-            className="h-48 mb-4 rounded-md"
-          />
-        ) : (
-          <img
-            src={ürün.resim || ürün.resimler?.[0]}
-            alt={ürün.isim}
-            className="w-full h-48 object-cover rounded-md mb-4"
-          />
-        )}
+        <img
+          src={ürün.resim || ürün.resimler?.[0]}
+          alt={ürün.isim}
+          className="w-full h-48 object-cover rounded-md mb-4"
+        />
       </Link>
 
       {/* Ürün Bilgileri */}
